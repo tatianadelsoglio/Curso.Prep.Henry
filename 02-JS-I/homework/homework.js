@@ -213,51 +213,91 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
+
+  numero = Math.round(numero);
+  if (numero > 0) {
+    return "Es positivo";
+    
+  } else if (numero < 0) {
+    return "Es negativo";
+
+  } else { 
+    return false;
+  }
 }
+
+num = Math.random();
+esPositivo(num);
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
+  var st = (str + "!");
+  return st;
+
 }
+
+agregarSimboloExclamacion("Holi");
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
+
+  var soy = (nombre + " " + apellido);
+  return soy;
 }
+combinarNombres("Tatiana", "Delsoglio");
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
+  var Saludo = ("Hola " + nombre + "!");
+  return Saludo;
 }
+obtenerSaludo("Tatiana");
 
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
+
+  var area = alto * ancho;
+  return area;
 }
+obtenerAreaRectangulo(6, 12);
+
 
 
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
+  var perimetro = 4 * lado;
+  return perimetro;
 }
+retornarPerimetro(4);
 
 
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
+  var area = (base * altura)/2;
+  return area;
 
 }
-
+areaDelTriangulo(3, 2);
 
 function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
+  var dolar = 1.20;
+  var cambio = (euro * dolar)/1;
+  return cambio;
   
 }
+deEuroAdolar(20);
 
 
 function esVocal(letra){
@@ -265,45 +305,38 @@ function esVocal(letra){
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   //Escribe tu código aquí
+  
+  var cantLetras = letra.length;
+  if (cantLetras > 1 || cantLetras == 0) {
+    var str = "Dato incorrecto";
+    return str;
+  } else {
+    switch (letra) {
+      case ("A" || "a"):
+        return "Es vocal";        
+        break;
+      case ("E" || "e"):
+        return "Es vocal";        
+        break;
+      case ("I" || "i"):
+        return "Es vocal";        
+        break;
+      case ("O" || "o"):
+        return "Es vocal";        
+        break;
+      case ("U" || "u"):
+        return "Es vocal";        
+        break;
+
+      default:
+        break;
+    }
+    var str = "Dato incorrecto";
+    return str;
+
+
+  }
+
 }
 
-
-
-// No modificar nada debajo de esta línea
-// --------------------------------
-
-module.exports = {
-  nuevaString,
-  nuevoNum,
-  nuevoBool,
-  nuevaResta,
-  nuevaMultiplicacion,
-  nuevoModulo,
-  devolverString,
-  tienenMismaLongitud,
-  sonIguales,
-  menosQueNoventa,
-  mayorQueCincuenta,
-  suma,
-  resta,
-  divide,
-  multiplica,
-  obtenerResto,
-  esPar,
-  esImpar,
-  elevarAlCuadrado,
-  elevarAlCubo,
-  elevar,
-  redondearNumero,
-  redondearHaciaArriba,
-  numeroRandom,
-  esPositivo,
-  agregarSimboloExclamacion,
-  combinarNombres,
-  obtenerSaludo,
-  obtenerAreaRectangulo,
-  retornarPerimetro,
-  areaDelTriangulo,
-  deEuroAdolar,
-  esVocal,
-};
+esVocal("a");
