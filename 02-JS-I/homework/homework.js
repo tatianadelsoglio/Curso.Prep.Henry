@@ -307,36 +307,59 @@ function esVocal(letra){
   //Escribe tu código aquí
   
   var cantLetras = letra.length;
+  
   if (cantLetras > 1 || cantLetras == 0) {
     var str = "Dato incorrecto";
     return str;
   } else {
-    switch (letra) {
-      case ("A" || "a"):
-        return "Es vocal";        
-        break;
-      case ("E" || "e"):
-        return "Es vocal";        
-        break;
-      case ("I" || "i"):
-        return "Es vocal";        
-        break;
-      case ("O" || "o"):
-        return "Es vocal";        
-        break;
-      case ("U" || "u"):
-        return "Es vocal";        
-        break;
-
-      default:
-        break;
+    if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+      var str = "Es vocal";
+      return str;
+    } else {
+      var str = "Dato incorrecto";
+      return str;
     }
-    var str = "Dato incorrecto";
-    return str;
-
-
   }
 
 }
 
-esVocal("a");
+esVocal('a');
+
+// No modificar nada debajo de esta línea
+// --------------------------------
+
+module.exports = {
+  nuevaString,
+  nuevoNum,
+  nuevoBool,
+  nuevaResta,
+  nuevaMultiplicacion,
+  nuevoModulo,
+  devolverString,
+  tienenMismaLongitud,
+  sonIguales,
+  menosQueNoventa,
+  mayorQueCincuenta,
+  suma,
+  resta,
+  divide,
+  multiplica,
+  obtenerResto,
+  esPar,
+  esImpar,
+  elevarAlCuadrado,
+  elevarAlCubo,
+  elevar,
+  redondearNumero,
+  redondearHaciaArriba,
+  numeroRandom,
+  esPositivo,
+  agregarSimboloExclamacion,
+  combinarNombres,
+  obtenerSaludo,
+  obtenerAreaRectangulo,
+  retornarPerimetro,
+  areaDelTriangulo,
+  deEuroAdolar,
+  esVocal,
+};
