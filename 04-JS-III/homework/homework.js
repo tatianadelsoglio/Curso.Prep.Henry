@@ -239,8 +239,7 @@ function breakStatement(numero) {
     ray.push(numero);
     if (numero === i) {
       return "Se interrumpió la ejecución";
-    }
-    
+    } 
   }
   return ray;
 }
