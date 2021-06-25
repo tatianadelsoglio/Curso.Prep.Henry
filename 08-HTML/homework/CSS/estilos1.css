@@ -1,5 +1,13 @@
+body {
+    text-align: center;
+    background-image: url(https://kinsta.com/es/wp-content/uploads/sites/8/2020/10/cursos-de-disen%CC%83o-web.jpg);
+    
+    /*url(https://www.comunicare.es/wp-content/uploads/2021/02/The-Evolution-Of-Web-Development-Via-Machine-Learning.jpg);
+    url(https://www.algoritmomag.com/wp-content/uploads/2020/09/henry.jpeg);*/
+}
+
 h1 {
-    color: red;
+    color: goldenrod;
 }
 
 #thirdDiv div ul li img {
@@ -7,11 +15,12 @@ h1 {
 }
 
 #thirdDiv {
-    background-color: goldenrod;
+    background-color: purple;
     width: 500px;
     height: 600px;
     padding: 50px;
-    border: 3px solid lightpurple;
+    border: 3px solid violet;
+    margin: auto;
 }
 
 #spanId {
